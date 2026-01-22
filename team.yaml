@@ -1,0 +1,13 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: tech-delivery
+  title: Tech Delivery
+  description: Formerly know as Digital Enablement, are the guys that deliver tech.
+spec:
+  type: team
+  profile:
+    displayName: Tech Delivery
+    email: td@kpmg.nl
+  children: [Edina, Andrei, Dennis, Thomas]   # or list other groups here
