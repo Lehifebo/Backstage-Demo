@@ -1,0 +1,27 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sonarqube-sonarproperties
+  title: SonarQube Sonar Properties
+  description: >
+    Component responsible for defining, maintaining, and validating
+    standardized sonar-project.properties used across repositories.
+    It ensures consistent configuration for code analysis, quality gates,
+    coverage reporting, exclusions, and language-specific settings when
+    running SonarQube analyses.
+  tags:
+    - sonarqube
+    - sonar-properties
+    - configuration
+    - quality
+    - governance
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: library
+  lifecycle: production
+  owner: group:software-quality-team
+  system: Sonar
+  dependsOn:
+    - resource:sonarqube
