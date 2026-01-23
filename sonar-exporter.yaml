@@ -19,7 +19,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: group:software-quality
-  system: software-quality
+  owner: group:software-quality-team
+  system: Sonar
   dependsOn:
     - resource:sonarqube
