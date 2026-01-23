@@ -1,13 +1,21 @@
 
 apiVersion: backstage.io/v1alpha1
-kind: Group
+kind: Component
 metadata:
-  name: tech-delivery
-  title: Tech Delivery
-  description: Formerly know as Digital Enablement, are the guys that deliver tech.
+  name: tech-delivery-portal
+  title: Tech Delivery Portal
+  description: Internal portal and services owned by the Tech Delivery team.
+  tags:
+    - tech-delivery
+    - internal
+    - platform
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: your-org/tech-delivery-portal
 spec:
-  type: team
-  profile:
-    displayName: Tech Delivery
-    email: td@kpmg.nl
-  children: [Edina, Andrei, Dennis, Thomas]   # or list other groups here
+  type: service
+  lifecycle: production
+  owner: tech-delivery
+  system: tech-delivery-platform
+  providesApis:
+    - tech-delivery-api
