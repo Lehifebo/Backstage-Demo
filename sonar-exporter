@@ -14,17 +14,12 @@ metadata:
     - observability
   annotations:
     backstage.io/techdocs-ref: dir:.
-    # Example integrations – adjust as needed
-    github.com/project-slug: your-org/sonar-exporter
-    sonarqube.org/project-key: sonar-exporter
     prometheus.io/scrape: "true"
     prometheus.io/port: "8080"
 spec:
   type: service
   lifecycle: production
-  owner: group:software-quality-team
+  owner: group:software-quality
   system: software-quality
   dependsOn:
     - resource:sonarqube
-  providesApis:
-    - sonar-metrics-api
