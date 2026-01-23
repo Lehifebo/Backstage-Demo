@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sonarqube-benchmarking
+  title: SonarQube Benchmarking Service
+  description: >
+    Service responsible for benchmarking SonarQube instances and projects.
+    It measures performance, scalability, analysis duration, and quality trends
+    across repositories and over time to support capacity planning and quality
+    governance.
+  tags:
+    - sonarqube
+    - benchmarking
+    - quality
+    - performance
+    - observability
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8081"
+spec:
+  type: service
+  lifecycle: production
+  owner: group:software-quality-team
+  system: Sonar
+  dependsOn:
+    - component:sonar-exporter
+    - resource:sonarqube
